@@ -148,3 +148,56 @@ div>h1{
 .ten{
     grid-area: ten;
 }
+
+@media screen and (max-width: 768px) {
+    #intro {
+        grid-template-areas: 
+            "header"
+            "intropic"
+            "para";
+    }
+    
+    #intro>p {
+        font-size: 18px;
+        padding: 5%;
+    }
+    
+    #intro>img {
+        height: 200px;
+        margin: 0 auto;
+    }
+    
+    #special {
+        grid-template-areas:
+            "one"
+            "two"
+            "three"
+            "four"
+            "five"
+            "six"
+            "seven"
+            "eight"
+            "nine"
+            "ten";
+    }
+    
+    #special>img {
+        height: 150px;
+    }
+    
+    #menubutton, #orderbutton {
+        font-size: 18px;
+    }
+    
+    .cutline {
+        font-size: 20px;
+    }
+    
+    footer {
+        font-size: 14px;
+    }
+    
+    footer>h2 {
+        font-size: 18px;
+    }
+}
