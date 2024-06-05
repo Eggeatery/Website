@@ -149,7 +149,7 @@ div>h1{
     grid-area: ten;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
     #intro {
         grid-template-areas: 
             "header"
