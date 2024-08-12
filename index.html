@@ -1,59 +1,261 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title> The Egg Eatery </title>
-        <link rel="stylesheet" href="./css/styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== BOX ICONS ==========-->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href=" css/styles1.css">
+
+        <title>The Egg Eatery</title>
     </head>
     <body>
-        <header>
-            <h1> The Egg Eatery </h1>
+
+        <!--========== SCROLL TOP ==========-->
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class='bx bx-chevron-up scrolltop__icon'></i>
+        </a>
+
+        <!--========== HEADER ==========-->
+        <header class="l-header" id="header">
+            <nav class="nav bd-container">
+                <a href="#" class="nav__logo con"><img src=" images/logo2-removebg-preview.png" alt="" class="responsive-image"></a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                        <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact us</a></li>
+
+                   </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
         </header>
-        
-        <div id="intro">
-            <h1> Little About Us </h1>
-            <p> Welcome to our cozy egg restaurant! We started in 2017 because we saw a need for a clean, family-friendly place to enjoy eggs. Our restaurant is all about making eggs fun and delicious. We've got a menu full of tasty egg dishes for every meal. Since we started, we've grown a lot. Now we have restaurants in lots of places, both near and far. It makes us happy to see people enjoying our egg creations all over the world. So, if you're in the mood for some yummy eggs, come on in! We'd love to serve you some egg-cellent dishes and make your day egg-stra special. </p>
-            <img src="./images/aboutus.jpg">
-        </div>
-        
-        <p class="cutline"> _____ </p>
-        
-        <div id="menudiv">
-            <a href="../menu/Egg Eatery menu.pdf" target="_blank">
-                <button id="menubutton"> CheckOut Our Menu Here! </button>
-            </a>
-        </div>
 
-        <p class="cutline"> _____ </p>
+        <main class="l-main">
+            <!--========== HOME ==========-->
+            <section class="home" id="home">
+                <div class="home__container bd-container bd-grid">
+                    <div class="home__data">
+                        <h1 class="home__title">The Egg Eatery</h1>
+                        <h2 class="home__subtitle">Try the best food of <br> the week.</h2>
+                        <a href="menu.html" class="button">View Menu</a>
+                    </div>
+    
+                    <img src=" images/home.png" alt="" class="home__img">
+                </div>
+            </section>
+            
+            <!--========== ABOUT ==========-->
+            <section class="about section bd-container" id="about">
+                <div class="about__container  bd-grid">
+                    <div class="about__data">
+                        <span class="section-subtitle about__initial">About us</span>
+                        <h2 class="section-title about__initial">We cook the best <br> Eggs</h2>
+                        <p class="about__description">Welcome to our cozy egg restaurant! We started in 2017 because we saw a need for a clean, family-friendly place to enjoy eggs. Our restaurant is all about making eggs fun and delicious. We've got a menu full of tasty egg dishes for every meal. Since we started, we've grown a lot. Now we have restaurants in lots of places, both near and far. It makes us happy to see people enjoying our egg creations all over the world. So, if you're in the mood for some yummy eggs, come on in! We'd love to serve you some egg-cellent dishes and make your day egg-stra special.</p>
+                      </div>
 
-        <div id="orderdiv">
-            <a href="https://gosnappy.io/owa/snappy/detail/G1398/1398/" target="_blank">
-                <button id="orderbutton"> Order Online Now! </button>
-            </a>
-        </div>
+                    <img src=" images/about.jpg" alt="" class="about__img">
+                </div>
+            </section>
 
-        <p class="cutline"> _____ </p>
+            <!--========== SERVICES ==========-->
+            <section class="services section bd-container" id="services">
+                <span class="section-subtitle">Offering</span>
+                <h2 class="section-title">Our amazing services</h2>
 
-        <h1 style="text-align: center;"> SPECIAL ITEMS </h1>
-        <div id="special">
-            <img src="../images/menu1.jpg" class="one">
-            <img src="../images/menu2.png" class="two">
-            <img src="../images/menu3.png" class="three">
-            <img src="../images/menu4.png" class="four">
-            <img src="../images/menu5.png" class="five">
-            <img src="../images/menu6.png" class="six">
-            <img src="../images/menu7.png" class="seven">
-            <img src="../images/menu8.png" class="eight">
-            <img src="../images/menu9.jpg" class="nine">
-            <img src="../images/menu10.jpg" class="ten">
-        </div>
-        <br>
+                <div class="services__container  bd-grid">
+                    <div class="services__content">
+                        <svg class="services__img" xmlns="http://www.w3.org/2000/svg">
+                            </svg>
+                        <h3 class="services__title">Excellent food</h3>
+                        <p class="services__description">We offer our clients excellent quality services for many years, with the best and delicious food in the city.</p>
+                    </div>
 
-        <footer>
-            <h2> CONTACT US </h2>
-            theeggeatery.ca <br>
-            +1 (416) 755 9333 <br>
-            1348 Kennedy Rd, Toronto, ON M1P 2L7 <br>
-            eggeateryca@gmail.com <br>
+                    <div class="services__content">
+                        <svg class="services__img" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                            </g>
+                            <defs>
+                            <clipPath id="clip0">
+                            <rect width="64" height="64" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                        <h3 class="services__title">Fast food</h3>
+                        <p class="services__description">We offer our clients excellent quality services for many years, with the best and delicious food in the city.</p>
+                    </div>
+
+                    <div class="services__content">
+                        <svg class="services__img" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                                </g>
+                                <defs>
+                                <clipPath id="clip0">
+                                <rect width="64" height="64" fill="white"/>
+                                </clipPath>
+                                </defs>
+                        </svg>
+                        <h3 class="services__title">Delivery</h3>
+                        <p class="services__description">We offer our clients excellent quality services for many years, with the best and delicious food in the city.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!--========== MENU ==========-->
+            <section class="menu section bd-container" id="menu">
+                <h2 class="section-title">Menu</h2>
+
+                <div class="menu__container bd-grid">
+                    <div class="menu__content">
+                        <img src=" dish/andda_biryani.jpeg" alt="" class="menu__img">
+                        <h3 class="menu__name">Anda Biryani</h3>
+                        <span class="menu__detail">It will beirrestitable to curb the craving for this version of Biryani</span>
+                        <span class="menu__preci">$11.99</span>
+                         
+                    </div>
+
+                    <div class="menu__content">
+                        <img src=" dish/bambiya_special.jpeg" alt="" height="50%" width="50%" class="menu__img">
+                        <h3 class="menu__name">Bambaiya Special</h3>
+                        <span class="menu__detail">Full fry with long capsicum & onions.</span>
+                        <span class="menu__preci">$8.99</span>
+                         
+                    </div>
+                    
+                    <div class="menu__content">
+                        <img src=" dish/boil_shots.jpeg" alt="" class="menu__img">
+                        <h3 class="menu__name">Boil Shots</h3>
+                        <span class="menu__detail">Fried boil filled with egg yolk mixed in cheese is the most scrumptous dish to start with</span>
+                        <span class="menu__preci">$2.94</span>
+                         
+                    </div>
+                    <div class="menu__content">
+                        <img src=" dish/boil_tikka_khema.jpeg" alt="" class="menu__img">
+                        <h3 class="menu__name">Boil Tikka Kheema</h3>
+                        <span class="menu__detail">Delicious dish</span>
+                        <span class="menu__preci">$8.99</span>
+                         
+                    </div>
+                    <div class="menu__content">
+                        <img src=" dish/boil_tikka_rice.jpeg" alt="" class="menu__img">
+                        <h3 class="menu__name">Boil Tikka Rice</h3>
+                        <span class="menu__detail">Delicious dish</span>
+                        <span class="menu__preci">$$</span>
+                         
+                    </div>
+                    <div class="menu__content">
+                        <img src=" dish/cheese_omlette.jpeg" alt="" class="menu__img">
+                        <h3 class="menu__name">Cheese Omlette</h3>
+                        <span class="menu__detail">Masala omleete with cheese</span>
+                        <span class="menu__preci">$2.94</span>
+                         
+                    </div>
+                    <div class="menu__content">
+                        <img src=" dish/Dhaba_style_eggcurry.jpeg" alt="" class="menu__img">
+                        <h3 class="menu__name">Dhaba Style EGG Curry</h3>
+                        <span class="menu__detail">Delicious dish</span>
+                        <span class="menu__preci">$12.49</span>
+                         
+                    </div>
+                    <div class="menu__content">
+                        <img src=" dish/double_sunday.jpeg" alt="" class="menu__img">
+                        <h3 class="menu__name">Double Sunday</h3>
+                        <span class="menu__detail">Delicious dish</span>
+                        <span class="menu__preci">$10.99</span>
+                         
+                    </div>
+                    <div class="menu__content">
+                        <img src=" dish/Egg_handi_tadka.jpeg" alt="" class="menu__img">
+                        <h3 class="menu__name">Egg Handi Tadka</h3>
+                        <span class="menu__detail">Delicious dish</span>
+                        <span class="menu__preci">$$</span>
+                         
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="contact__button">
+                    <a href="menu.html" class="button">More Items</a>
+                    <a href="https://gosnappy.io/owa/snappy/detail/G1398/1398/" class="button">Order Online</a>
+                </div>
+                    
+            </section>
+           
+            <!--========== CONTACT US ==========-->
+            <section class="contact section bd-container" id="contact">
+                <div class="contact__container bd-grid">
+                    <div class="contact__data">
+                        <span class="section-subtitle contact__initial">Let's talk</span>
+                        <h2 class="section-title contact__initial">Contact us</h2>
+                        <p class="contact__description">If you want to reserve a table in our restaurant, contact us and we will attend you quickly, with our 24/7 chat service.</p>
+                    </div>
+
+                    <div class="contact__button">
+                        <a href="#" class="button">Contact us now</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--========== FOOTER ==========-->
+        <footer class="footer section bd-container">
+            <div class="footer__container bd-grid">
+                <div class="footer__content">
+                    <a href="#" class="footer__logo">The Egg Eatery</a>
+                    <span class="footer__description">Restaurant</span>
+                    <div>
+                        <a href="https://www.facebook.com/share/fiCSbPbeU1AhPCEy/?mibextid=LQQJ4d" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                        <a href="https://www.instagram.com/theeggeatery_ca?igsh=OWE0Z2xlMGpqdXl2&utm_source=qr" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Services</h3>
+                    <ul>
+                        <li><a href="#" class="footer__link">Delivery</a></li>
+                        <li><a href="#" class="footer__link">Pricing</a></li>
+                        <li><a href="#" class="footer__link">Fast food</a></li>
+                        <li><a href="#" class="footer__link">Reserve your spot</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Information</h3>
+                    <ul>
+                        <li><a href="#" class="footer__link">Event</a></li>
+                        <li><a href="#" class="footer__link">Contact us</a></li>
+                        <li><a href="#" class="footer__link">Privacy policy</a></li>
+                        <li><a href="#" class="footer__link">Terms of services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Address</h3>
+                    <ul>
+                        <li>theeggeatery.ca</li>
+                        <li>+1 (416) 755 9333</li>
+                        <li> 1348 Kennedy Rd, Toronto, ON M1P 2L7</li>
+                        <li>eggeateryca@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; The Egg Eatery. All right reserved</p>
         </footer>
+        <!--========== SCROLL REVEAL ==========-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--========== MAIN JS ==========-->
+        <script src=" js/main.js"></script>
     </body>
 </html>
