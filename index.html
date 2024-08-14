@@ -201,7 +201,20 @@
                     </div>
 
                     <div class="contact__button">
-                        <a href="#" class="button">Contact us now</a>
+                        <a href="#" class="button" id="dialButton">Contact us now</a>
+                         <script>
+        // Define the phone number you want to dial
+        const phoneNumber = "+14167559333"; // Replace with the number you want
+
+        // Get the button element
+        const dialButton = document.getElementById('dialButton');
+
+        // Add a click event listener to the button
+        dialButton.addEventListener('click', () => {
+            // Use the `tel` URI scheme to open the dialer with the specified number
+            window.location.href = `tel:${phoneNumber}`;
+        });
+    </script>
                     </div>
                 </div>
             </section>
