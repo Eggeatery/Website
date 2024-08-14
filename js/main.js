@@ -12,7 +12,18 @@ const showMenu = (toggleId, navId) =>{
     }
 }
 showMenu('nav-toggle','nav-menu')
+/*==========================New============================*/
+        // Define the phone number you want to dial
+        const phoneNumber = "+14167559333"; // Replace with the number you want
 
+        // Get the button element
+        const dialButton = document.getElementById('dialButton');
+
+        // Add a click event listener to the button
+        dialButton.addEventListener('click', () => {
+            // Use the `tel` URI scheme to open the dialer with the specified number
+            window.location.href = `tel:${phoneNumber}`;
+        });
 /*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll('.nav__link')
 
