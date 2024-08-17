@@ -36,38 +36,6 @@ showMenu('nav-toggle','nav-menu')
      }
  }
 
-// Get the popup and close button elements
-const popup = document.getElementById('popup');
-const openPopupLink = document.getElementById('openPopup');
-const closePopupButton = document.getElementById('closePopup');
-
-// Function to open the popup
-function openPopup() {
-    popup.style.display = 'block';
-}
-
-// Function to close the popup
-function closePopup() {
-    popup.style.display = 'none';
-}
-
-// Event listener for opening the popup
-openPopupLink.addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent the default link behavior
-    openPopup();
-});
-
-// Event listener for closing the popup
-closePopupButton.addEventListener('click', closePopup);
-
-// Optional: Close the popup if the user clicks outside of it
-window.addEventListener('click', function(event) {
-    if (event.target === popup) {
-        closePopup();
-    }
-});
-
-
 /*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll('.nav__link')
 
