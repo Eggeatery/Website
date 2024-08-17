@@ -29,7 +29,7 @@
                         <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
                         <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                         <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
-                        <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
+                        <li class="nav__item"><a href="menu.html" class="nav__link">Menu</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact us</a></li>
 
                    </ul>
@@ -51,7 +51,7 @@
                         <a href="menu.html" class="button">View Menu</a>
                     </div>
     
-                    <img src=" images/home.png" alt="" class="home__img">
+                    <img src="dish/main.jpeg" style="border-radius: 10%;" alt="" class="home__img">
                 </div>
             </section>
             
@@ -150,7 +150,7 @@
                         <img src=" dish/boil_tikka_rice.jpeg" alt="" class="menu__img">
                         <h3 class="menu__name">Boil Tikka Rice</h3>
                         <span class="menu__detail">Delicious dish</span>
-                        <span class="menu__preci">$8.99</span>
+                        <span class="menu__preci">$$</span>
                          
                     </div>
                     <div class="menu__content">
@@ -178,7 +178,7 @@
                         <img src=" dish/Egg_handi_tadka.jpeg" alt="" class="menu__img">
                         <h3 class="menu__name">Egg Handi Tadka</h3>
                         <span class="menu__detail">Delicious dish</span>
-                        <span class="menu__preci">13.99</span>
+                        <span class="menu__preci">$$</span>
                          
                     </div>
                 </div>
@@ -201,20 +201,7 @@
                     </div>
 
                     <div class="contact__button">
-                        <a href="" class="button" id="dialButton">Contact us now</a>
-                         <script>
-        // Define the phone number you want to dial
-        const phoneNumber = "+14167559333"; // Replace with the number you want
-
-        // Get the button element
-        const dialButton = document.getElementById('dialButton');
-
-        // Add a click event listener to the button
-        dialButton.addEventListener('click', () => {
-            // Use the `tel` URI scheme to open the dialer with the specified number
-            window.location.href = `tel:${phoneNumber}`;
-        });
-    </script>
+                        <a href="#" class="button">Contact us now</a>
                     </div>
                 </div>
             </section>
@@ -245,8 +232,16 @@
                 <div class="footer__content">
                     <h3 class="footer__title">Information</h3>
                     <ul>
-                        <li><a href="#" class="footer__link">Event</a></li>
-                        <li><a href="" class="footer__link" id="dialButton">Contact us</a></li>
+                        <li><a href="#" class="footer__link" id="openPopupBtn">Event</a></li>
+
+    <!-- The Popup -->
+    <div id="myPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="closePopup">&times;</span>
+            <p>Here is the information about the event !</p>
+        </div>
+    </div>
+                        <li><a href="tel: +14167559333" class="footer__link">Contact us</a></li>
                         <li><a href="#" class="footer__link">Privacy policy</a></li>
                         <li><a href="#" class="footer__link">Terms of services</a></li>
                     </ul>
