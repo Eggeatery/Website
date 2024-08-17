@@ -12,18 +12,30 @@ const showMenu = (toggleId, navId) =>{
     }
 }
 showMenu('nav-toggle','nav-menu')
-/*==========================New============================*/
-        // Define the phone number you want to dial
-        const phoneNumber = "+14167559333"; // Replace with the number you want
+/*==================== for POP UPS ====================*/
+ // Get the elements
+ var popup = document.getElementById("myPopup");
+ var btn = document.getElementById("openPopupBtn");
+ var close = document.getElementById("closePopup");
 
-        // Get the button element
-        const dialButton = document.getElementById('dialButton');
+ // When the user clicks the button, open the popup
+ btn.onclick = function() {
+     event.preventDefault();
+     popup.style.display = "flex";
+ }
 
-        // Add a click event listener to the button
-        dialButton.addEventListener('click', () => {
-            // Use the `tel` URI scheme to open the dialer with the specified number
-            window.location.href = `tel:${phoneNumber}`;
-        });
+ // When the user clicks on <span> (x), close the popup
+ close.onclick = function() {
+     popup.style.display = "none";
+ }
+
+ // When the user clicks anywhere outside of the popup, close it
+ window.onclick = function(event) {
+     if (event.target == popup) {
+         popup.style.display = "none";
+     }
+ }
+
 /*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll('.nav__link')
 
