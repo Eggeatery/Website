@@ -809,6 +809,7 @@
             </section>
         </main>
 
+   <!--========== FOOTER ==========-->
         <footer class="footer section bd-container">
             <div class="footer__container bd-grid">
                 <div class="footer__content">
@@ -833,17 +834,118 @@
                 <div class="footer__content">
                     <h3 class="footer__title">Information</h3>
                     <ul>
-                        <li><a href="#" class="footer__link" id="openPopupBtn">Event</a></li>
-
+                        <li><a href="" class="footer__link" id="openMessagePopup">Event</a></li>
                         <li><a href="tel: +14167559333" class="footer__link">Contact us</a></li>
-                        <li><a href="#" class="footer__link">Privacy policy</a></li>
-                        <li><a href="#" class="footer__link">Terms of services</a></li>
+                        <li><a href="#" class="footer__link" id="openPrivacyPopup">Privacy policy</a></li>
+                        <li><a href="#" class="footer__link" id="openTermsPopup">Terms of services</a></li>
+                        <!-- Message Popup box -->
+    <div id="messagePopup" class="popup">
+        <div class="popup-content">
+            <span class="cancel-btn" id="cancelMessagePopup">Cancel</span>
+            <p>This is your message!</p>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Popup box -->
+    <div id="privacyPopup" class="popup">
+        <div class="popup-content">
+            <span class="cancel-btn" id="cancelPrivacyPopup">Cancel</span>
+            <h2>Privacy Policy</h2>
+            <p>At The Egg Eatery and indian cafe, we are committed to protecting your privacy and ensuring the security of your personal information. Any personal information collected through our website or during the ordering process, such as your name, contact information, or payment details, will be used solely for the purpose of processing your order and providing you with the best possible service. We will never sell or share your information with third parties without your consent. By using our website and placing an order, you agree to the terms of our Privacy Policy.<br></div>
+    </div>
+
+    <!-- Terms and Conditions Popup box -->
+    <div id="termsPopup" class="popup">
+        <div class="popup-content">
+            <span class="cancel-btn" id="cancelTermsPopup">Cancel</span>
+            <h2>Terms and Conditions</h2>
+            <p>Terms of service
+By using the egg eatery and indian cafe website and placing an order, you agree to the following terms and conditions:<br>
+	1	All orders are subject to availability and confirmation. We reserve the right to cancel or refuse any order at our discretion.<br>
+	2	Prices and menu items are subject to change without notice.<br>
+	3	All payments must be made in full at the time of placing the order.<br>
+	4	Delivery times are estimates only and may vary depending on factors such as traffic and weather conditions.<br>
+	5	We are not responsible for any delays or issues with delivery services provided by third-party delivery partners such as Uber Eats, Skip the Dishes, and Doordash.<br>
+	6	Any promotional offers or discounts are subject to change or expiration without notice.<br>
+	7	We reserve the right to modify or update these terms of service at any time. By continuing to use our website and services, you agree to be bound by the latest version of these terms.<br></p>
+        </div>
+    </div>
+                        <script>
+                            // Get the popup elements and buttons
+const messagePopup = document.getElementById('messagePopup');
+const privacyPopup = document.getElementById('privacyPopup');
+const termsPopup = document.getElementById('termsPopup');
+const openMessagePopupLink = document.getElementById('openMessagePopup');
+const openPrivacyPopupLink = document.getElementById('openPrivacyPopup');
+const openTermsPopupLink = document.getElementById('openTermsPopup');
+const cancelMessagePopupButton = document.getElementById('cancelMessagePopup');
+const cancelPrivacyPopupButton = document.getElementById('cancelPrivacyPopup');
+const cancelTermsPopupButton = document.getElementById('cancelTermsPopup');
+
+// Function to open a specific popup
+function openPopup(popup) {
+    popup.style.display = 'block';
+    document.body.classList.add('no-scroll'); // Prevent scrolling
+}
+
+// Function to close a specific popup
+function closePopup(popup) {
+    popup.style.display = 'none';
+    document.body.classList.remove('no-scroll'); // Allow scrolling
+}
+
+// Event listener for opening the message popup
+openMessagePopupLink.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+    openPopup(messagePopup);
+});
+
+// Event listener for opening the privacy policy popup
+openPrivacyPopupLink.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+    openPopup(privacyPopup);
+});
+
+// Event listener for opening the terms and conditions popup
+openTermsPopupLink.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+    openPopup(termsPopup);
+});
+
+// Event listener for closing the message popup
+cancelMessagePopupButton.addEventListener('click', function() {
+    closePopup(messagePopup);
+});
+
+// Event listener for closing the privacy policy popup
+cancelPrivacyPopupButton.addEventListener('click', function() {
+    closePopup(privacyPopup);
+});
+
+// Event listener for closing the terms and conditions popup
+cancelTermsPopupButton.addEventListener('click', function() {
+    closePopup(termsPopup);
+});
+
+// Optional: Close the popup if the user clicks outside of it
+window.addEventListener('click', function(event) {
+    if (event.target === messagePopup) {
+        closePopup(messagePopup);
+    } else if (event.target === privacyPopup) {
+        closePopup(privacyPopup);
+    } else if (event.target === termsPopup) {
+        closePopup(termsPopup);
+    }
+});
+
+                        </script>
                     </ul>
                 </div>
 
                 <div class="footer__content">
                     <h3 class="footer__title">Address</h3>
                     <ul>
+			    <li>The Egg Eatery</li>
                         <li>theeggeatery.ca</li>
                         <li>+1 (416) 755 9333</li>
                         <li> 1348 Kennedy Rd, Toronto, ON M1P 2L7</li>
