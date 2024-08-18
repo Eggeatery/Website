@@ -218,41 +218,104 @@
                 <div class="footer__content">
                     <h3 class="footer__title">Information</h3>
                     <ul>
-                        <li><a href="" class="footer__link" id="openPopup">Event</a></li>
-<script>// Get the popup and cancel button elements
-const popup = document.getElementById('popup');
-const openPopupLink = document.getElementById('openPopup');
-const cancelPopupButton = document.getElementById('cancelPopup');
+                        <li><a href="" class="footer__link" id="openMessagePopup">Event</a></li>
+                        <li><a href="tel: +14167559333" class="footer__link">Contact us</a></li>
+                        <li><a href="#" class="footer__link" id="openPrivacyPopup">Privacy policy</a></li>
+                        <li><a href="#" class="footer__link" id="openTermsPopup">Terms of services</a></li>
+                        <!-- Message Popup box -->
+    <div id="messagePopup" class="popup">
+        <div class="popup-content">
+            <span class="cancel-btn" id="cancelMessagePopup">Cancel</span>
+            <p>This is your message!</p>
+        </div>
+    </div>
 
-// Function to open the popup
-function openPopup() {
+    <!-- Privacy Policy Popup box -->
+    <div id="privacyPopup" class="popup">
+        <div class="popup-content">
+            <span class="cancel-btn" id="cancelPrivacyPopup">Cancel</span>
+            <h2>Privacy Policy</h2>
+            <p>Your privacy policy content goes here. This can include information about data collection, user rights, and other relevant details.</p>
+        </div>
+    </div>
+
+    <!-- Terms and Conditions Popup box -->
+    <div id="termsPopup" class="popup">
+        <div class="popup-content">
+            <span class="cancel-btn" id="cancelTermsPopup">Cancel</span>
+            <h2>Terms and Conditions</h2>
+            <p>Your terms and conditions content goes here. This might include user obligations, service terms, and legal disclaimers.</p>
+        </div>
+    </div>
+                        <script>
+                            // Get the popup elements and buttons
+const messagePopup = document.getElementById('messagePopup');
+const privacyPopup = document.getElementById('privacyPopup');
+const termsPopup = document.getElementById('termsPopup');
+const openMessagePopupLink = document.getElementById('openMessagePopup');
+const openPrivacyPopupLink = document.getElementById('openPrivacyPopup');
+const openTermsPopupLink = document.getElementById('openTermsPopup');
+const cancelMessagePopupButton = document.getElementById('cancelMessagePopup');
+const cancelPrivacyPopupButton = document.getElementById('cancelPrivacyPopup');
+const cancelTermsPopupButton = document.getElementById('cancelTermsPopup');
+
+// Function to open a specific popup
+function openPopup(popup) {
     popup.style.display = 'block';
+    document.body.classList.add('no-scroll'); // Prevent scrolling
 }
 
-// Function to close the popup
-function closePopup() {
+// Function to close a specific popup
+function closePopup(popup) {
     popup.style.display = 'none';
+    document.body.classList.remove('no-scroll'); // Allow scrolling
 }
 
-// Event listener for opening the popup
-openPopupLink.addEventListener('click', function(event) {
+// Event listener for opening the message popup
+openMessagePopupLink.addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default link behavior
-    openPopup();
+    openPopup(messagePopup);
 });
 
-// Event listener for closing the popup
-cancelPopupButton.addEventListener('click', closePopup);
+// Event listener for opening the privacy policy popup
+openPrivacyPopupLink.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+    openPopup(privacyPopup);
+});
+
+// Event listener for opening the terms and conditions popup
+openTermsPopupLink.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+    openPopup(termsPopup);
+});
+
+// Event listener for closing the message popup
+cancelMessagePopupButton.addEventListener('click', function() {
+    closePopup(messagePopup);
+});
+
+// Event listener for closing the privacy policy popup
+cancelPrivacyPopupButton.addEventListener('click', function() {
+    closePopup(privacyPopup);
+});
+
+// Event listener for closing the terms and conditions popup
+cancelTermsPopupButton.addEventListener('click', function() {
+    closePopup(termsPopup);
+});
 
 // Optional: Close the popup if the user clicks outside of it
 window.addEventListener('click', function(event) {
-    if (event.target === popup) {
-        closePopup();
+    if (event.target === messagePopup) {
+        closePopup(messagePopup);
+    } else if (event.target === privacyPopup) {
+        closePopup(privacyPopup);
+    } else if (event.target === termsPopup) {
+        closePopup(termsPopup);
     }
 });
-</script>
-                        <li><a href="tel: +14167559333" class="footer__link">Contact us</a></li>
-                        <li><a href="#" class="footer__link">Privacy policy</a></li>
-                        <li><a href="#" class="footer__link">Terms of services</a></li>
+
+                        </script>
                     </ul>
                 </div>
 
