@@ -80,7 +80,6 @@ body.dark-theme{
   cursor: pointer;
 }
 /* Popup box styles */
-/* Popup box styles */
 .popup {
     display: none; /* Hidden by default */
     position: fixed;
@@ -100,24 +99,26 @@ body.dark-theme{
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
     max-width: 500px;
-    position: relative;
+    position: relative; /* Position relative to place the cancel button */
 }
 
 .cancel-btn {
     color: #007bff;
     font-size: 16px;
     cursor: pointer;
-    float: right;
-    padding: 5px;
+    padding: 5px 10px;
     border: 1px solid #007bff;
     border-radius: 5px;
+    background-color: #fff;
+    position: absolute; /* Position absolutely within the popup-content */
+    bottom: 20px; /* Space from the bottom */
+    right: 20px; /* Space from the right */
     text-align: center;
 }
 
 .cancel-btn:hover {
     background-color: #e9ecef;
 }
-
 
 body{
   margin: var(--header-height) 0 0 0;
