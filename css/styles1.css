@@ -80,6 +80,7 @@ body.dark-theme{
   cursor: pointer;
 }
 /* Popup box styles */
+/* Popup box styles */
 .popup {
     display: none; /* Hidden by default */
     position: fixed;
@@ -99,20 +100,22 @@ body.dark-theme{
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
     max-width: 500px;
+    position: relative;
 }
 
-.close-btn {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close-btn:hover,
-.close-btn:focus {
-    color: black;
-    text-decoration: none;
+.cancel-btn {
+    color: #007bff;
+    font-size: 16px;
     cursor: pointer;
+    float: right;
+    padding: 5px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.cancel-btn:hover {
+    background-color: #e9ecef;
 }
 
 
