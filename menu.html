@@ -50,7 +50,24 @@
                 <div class="curved-line"></div>
                 <br>
                 <h2>Eggs</h2>
+<style>
+.image-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow images to wrap in rows */
+    justify-content: center; /* Center images horizontally */
+}
 
+.image-container img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 200px; /* Set a maximum width for the images */
+    max-height: 200px; /* Set a maximum height for the images */
+    object-fit: cover; /* Crop the image to fit the box */
+    margin: 10px; /* Space between images */
+}
+
+</style>
+<div class="image-container">
                 <div class="menu__container bd-grid">
                     <div class="menu__content">
                         <img src="dish/Boil_eggs.jpeg" alt="" class="menu__img">
@@ -786,7 +803,7 @@
                         <span class="menu__preci">$0.99</span>
                     </div>
                 </div>
-
+</div>
                 <br><br><br>
                 <div class="contact__button" margin-left="20px">
                     <a href="https://gosnappy.io/owa/snappy/detail/G1398/1398/" class="button">Order Online</a>
